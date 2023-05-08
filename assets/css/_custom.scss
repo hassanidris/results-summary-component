@@ -52,6 +52,7 @@
 
 .summary {
     padding: 2.5rem;
+    font-family: var(--ff-hankenGrotesk);
 
     &__title {
         font-weight: var(--fw-bold);
@@ -88,6 +89,16 @@
 
         &-title {
             color: hsl(var(--clr-box));
+            font-weight: var(--fw-bold);
+        }
+
+        &-score {
+            font-weight: var(--fw-black);
+            color: hsla(224, 30%, 27%, .5);
+
+            span {
+                color: var(--clr-nut-700-darkGrayBlue);
+            }
         }
     }
 

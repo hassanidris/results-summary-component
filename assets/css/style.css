@@ -181,6 +181,7 @@ body {
 
 .summary {
   padding: 2.5rem;
+  font-family: var(--ff-hankenGrotesk);
 }
 .summary__title {
   font-weight: var(--fw-bold);
@@ -211,6 +212,14 @@ body {
 }
 .summary__output-title {
   color: hsl(var(--clr-box));
+  font-weight: var(--fw-bold);
+}
+.summary__output-score {
+  font-weight: var(--fw-black);
+  color: hsla(224, 30%, 27%, 0.5);
+}
+.summary__output-score span {
+  color: var(--clr-nut-700-darkGrayBlue);
 }
 .summary__btn {
   color: var(--clr-nut-100-white);
