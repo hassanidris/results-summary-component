@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Costum CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 9px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="results space-flow large">
+          <h1 class="results__title">Your Result</h1>
+          <p class="results__score"><span>76</span> of 100</p>
+          <div class="space-flow">
+            <p class="results__level">Great</p>
+            <p class="results__desc">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+        </div>
+        <div class="summary space-flow large">
+          <h2 class="summary__title">Summary</h2>
+          <div class="space-flow">
+            <div class="summary__output" data-item-type="box-1">
+              <div class="flex-group">
+                <!-- <svg></svg> -->
+                <img
+                  src="./assets/images/icon-reaction.svg"
+                  alt="Reaction"
+                  class="summary__output-icon"
+                />
+                <h3 class="summary__output-title">Reaction</h3>
+              </div>
+              <p class="summary__output-score"><span>80</span> / 100</p>
+            </div>
+            <div class="summary__output" data-item-type="box-2">
+              <div class="flex-group">
+                <!-- <svg></svg> -->
+                <img
+                  src="./assets/images/icon-memory.svg"
+                  alt="Memory"
+                  class="summary__output-icon"
+                />
+                <h3 class="summary__output-title">Memory</h3>
+              </div>
+              <p class="summary__output-score"><span>92</span> / 100</p>
+            </div>
+            <div class="summary__output" data-item-type="box-3">
+              <div class="flex-group">
+                <!-- <svg></svg> -->
+                <img
+                  src="./assets/images/icon-verbal.svg"
+                  alt="Verbal"
+                  class="summary__output-icon"
+                />
+                <h3 class="summary__output-title">Verbal</h3>
+              </div>
+              <p class="summary__output-score"><span>61</span> / 100</p>
+            </div>
+            <div class="summary__output" data-item-type="box-4">
+              <div class="flex-group">
+                <!-- <svg></svg> -->
+                <img
+                  src="./assets/images/icon-visual.svg"
+                  alt="Visual"
+                  class="summary__output-icon"
+                />
+                <h3 class="summary__output-title">Visual</h3>
+              </div>
+              <p class="summary__output-score"><span>72</span> / 100</p>
+            </div>
+          </div>
+          <button class="summary__btn">Continue</button>
+        </div>
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer>
+  </body>
+</html>

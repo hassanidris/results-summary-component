@@ -1,0 +1,50 @@
+/* 
+//
+//
+----------------  Utilities Styling ---------------- 
+//
+//
+*/
+
+// .visually-hidden:not(:focus):not(:active) {
+//     clip: rect(0 0 0 0);
+//     clip-path: inset(50%);
+//     height: 1px;
+//     overflow: hidden;
+//     position: absolute;
+//     white-space: nowrap;
+//     width: 1px;
+// }
+
+.container {
+    max-width: 46rem;
+    display: grid;
+
+    @media (min-width: 600px) {
+        margin-inline: 1rem;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 2rem;
+        overflow: hidden;
+        box-shadow: .5rem 1rem 3rem 
+        hsla(224, 30%, 27%, 0.2);
+    }
+}
+
+.space-flow {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+}
+
+.large {
+    gap: 2rem;
+}
+
+.flex-group {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+

@@ -1,0 +1,53 @@
+
+/* 
+//
+//
+----------------  Root Styling ---------------- 
+//
+//
+*/
+
+
+:root {
+
+    //  ### Primary
+    --clr-prm-400-lightRed: hsl(0, 100%, 67%);
+    --clr-prm-500-orangeyYellow: hsl(39, 100%, 56%);
+    --clr-prm-400-greenTeal: hsl(166, 100%, 37%);
+    --clr-prm-500-cobaltBlue: hsl(234, 85%, 45%);
+
+    //  ### Neutral
+    --clr-nut-100-white: hsl(0, 0%, 100%);
+    --clr-nut-200-paleBlue-nut: hsl(221, 100%, 96%);
+    --clr-nut-300-lightLavender: hsl(241, 100%, 89%);
+    --clr-nut-700-darkGrayBlue: hsl(224, 30%, 27%);
+
+    //  ### Gradient
+    --gradient-background: linear-gradient(
+        hsl(252, 100%, 67%), 
+        hsl(241, 81%, 54%));
+    --gradient-circle: linear-gradient(
+        hsla(256, 72%, 46%, 1),
+        hsla(241, 72%, 46%, 0)
+    );
+
+    //  ### Boxes Colors
+    --clr-box-1: 0, 100%, 67%;
+    --clr-box-2: 39, 100%, 56%;
+    --clr-box-3: 166, 100%, 37%;
+    --clr-box-4: 234, 85%, 45%;
+
+    //  ## Typography
+    --ff-hankenGrotesk: 'HankenGrotesk', sans-serif;
+
+    --fw-normal: 500;
+    --fw-bold: 700;
+    --fw-black: 800;
+
+    --fs-400: 1.125rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+    --fs-900: 5rem;
+}

@@ -1,0 +1,226 @@
+/*
+//
+//
+ ----------------  Font Family ---------------- 
+//
+//
+*/
+@font-face {
+  font-family: "HankenGrotesk";
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("truetype");
+}
+/* 
+//
+//
+----------------  Root Styling ---------------- 
+//
+//
+*/
+:root {
+  --clr-prm-400-lightRed: hsl(0, 100%, 67%);
+  --clr-prm-500-orangeyYellow: hsl(39, 100%, 56%);
+  --clr-prm-400-greenTeal: hsl(166, 100%, 37%);
+  --clr-prm-500-cobaltBlue: hsl(234, 85%, 45%);
+  --clr-nut-100-white: hsl(0, 0%, 100%);
+  --clr-nut-200-paleBlue-nut: hsl(221, 100%, 96%);
+  --clr-nut-300-lightLavender: hsl(241, 100%, 89%);
+  --clr-nut-700-darkGrayBlue: hsl(224, 30%, 27%);
+  --gradient-background: linear-gradient(
+      hsl(252, 100%, 67%),
+      hsl(241, 81%, 54%));
+  --gradient-circle: linear-gradient(
+      hsla(256, 72%, 46%, 1),
+      hsla(241, 72%, 46%, 0)
+  );
+  --clr-box-1: 0, 100%, 67%;
+  --clr-box-2: 39, 100%, 56%;
+  --clr-box-3: 166, 100%, 37%;
+  --clr-box-4: 234, 85%, 45%;
+  --ff-hankenGrotesk: "HankenGrotesk", sans-serif;
+  --fw-normal: 500;
+  --fw-bold: 700;
+  --fw-black: 800;
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 5rem;
+}
+
+/* 
+//
+//
+----------------  Reset Styling ---------------- 
+//
+//
+*/
+/* Source of the reset code: https://www.joshwcomeau.com/css/custom-css-reset/ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 
+//
+//
+----------------  Global Styling ---------------- 
+//
+//
+*/
+body {
+  font-family: var(--ff-hankenGrotesk);
+  font-weight: var(--fw-normal);
+  color: var(--clr-nut-700-darkGrayBlue);
+}
+@media (min-width: 600px) {
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+}
+
+/* 
+//
+//
+----------------  Utilities Styling ---------------- 
+//
+//
+*/
+.container {
+  max-width: 46rem;
+  display: grid;
+}
+@media (min-width: 600px) {
+  .container {
+    margin-inline: 1rem;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0.5rem 1rem 3rem hsla(224, 30%, 27%, 0.2);
+  }
+}
+
+.space-flow {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.large {
+  gap: 2rem;
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* 
+//
+//
+----------------  Custom Styling ---------------- 
+//
+//
+*/
+.results {
+  color: hsla(0, 0%, 100%, 0.7);
+  text-align: center;
+  padding: 2.5rem 3.75rem;
+  background: var(--gradient-background);
+  border-radius: 0 0 2rem 2rem;
+}
+@media (min-width: 600px) {
+  .results {
+    border-radius: 2rem;
+  }
+}
+.results__title {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-600);
+}
+.results__score {
+  display: grid;
+  place-content: center;
+  width: 12rem;
+  margin-inline: auto;
+  background: var(--gradient-circle);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.results__score span {
+  display: block;
+  font-size: var(--fs-900);
+  font-weight: var(--fw-black);
+  line-height: 1;
+  color: var(--clr-nut-100-white);
+}
+.results__level {
+  color: var(--clr-nut-100-white);
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+}
+
+.summary {
+  padding: 2.5rem;
+}
+.summary__title {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-600);
+}
+.summary__output {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: hsl(var(--clr-box), 0.1);
+}
+.summary__output[data-item-type=box-1] {
+  --clr-box: var(--clr-box-1);
+}
+.summary__output[data-item-type=box-2] {
+  --clr-box: var(--clr-box-2);
+}
+.summary__output[data-item-type=box-3] {
+  --clr-box: var(--clr-box-3);
+}
+.summary__output[data-item-type=box-4] {
+  --clr-box: var(--clr-box-4);
+}
+.summary__output-icon {
+  stroke: hsl(var(--clr-box));
+}
+.summary__output-title {
+  color: hsl(var(--clr-box));
+}
+.summary__btn {
+  color: var(--clr-nut-100-white);
+  line-height: 1;
+  background: var(--clr-nut-700-darkGrayBlue);
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 100vw;
+  cursor: pointer;
+}
+.summary__btn:is(:hover, :focus-visible) {
+  background: var(--gradient-background);
+}/*# sourceMappingURL=style.css.map */

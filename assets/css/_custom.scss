@@ -1,0 +1,108 @@
+
+
+/* 
+//
+//
+----------------  Custom Styling ---------------- 
+//
+//
+*/
+
+
+.results {
+    color: hsla(0, 0%, 100%, .7);
+    text-align: center;
+    padding:  2.5rem calc(2.5rem * 1.5);
+    background: var(--gradient-background);
+    border-radius: 0 0 2rem 2rem;
+
+    @media (min-width: 600px) {
+        border-radius: 2rem;
+    }
+
+    &__title {
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-600);
+    }
+
+    &__score {
+        display: grid;
+        place-content: center;  
+        width: 12rem;
+        margin-inline: auto;
+        background: var(--gradient-circle);
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+
+        span {
+            display: block;
+            font-size: var(--fs-900); 
+            font-weight: var(--fw-black);
+            line-height: 1;
+            color: var(--clr-nut-100-white);
+        }
+    }
+
+    &__level {
+        color: var(--clr-nut-100-white);
+        font-size: var(--fs-700);
+        font-weight: var(--fw-bold);
+    }
+}
+
+.summary {
+    padding: 2.5rem;
+
+    &__title {
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-600);
+    }
+
+    &__output {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border-radius: .5rem;
+        background-color: hsl(var(--clr-box), .1);
+
+        &[data-item-type="box-1"] {
+            --clr-box: var(--clr-box-1);
+        }
+
+        &[data-item-type="box-2"] {
+            --clr-box: var(--clr-box-2);
+        }
+
+        &[data-item-type="box-3"] {
+            --clr-box: var(--clr-box-3);
+        }
+
+        &[data-item-type="box-4"] {
+            --clr-box: var(--clr-box-4);
+        }
+
+        &-icon {
+            stroke: hsl(var(--clr-box));
+        }
+
+        &-title {
+            color: hsl(var(--clr-box));
+        }
+    }
+
+    &__btn {
+        color: var(--clr-nut-100-white);
+        line-height: 1;
+        background: var(--clr-nut-700-darkGrayBlue);
+        padding: 1rem 2rem;
+        border: 0;
+        border-radius: 100vw;
+        cursor: pointer;
+
+        &:is(:hover, :focus-visible) {
+            background: var(--gradient-background);
+        }
+    }
+}
+
