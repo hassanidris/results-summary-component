@@ -16,7 +16,7 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot 2023-05-08 at 23 35 16](https://user-images.githubusercontent.com/69512496/236943383-9e8743ad-eecb-43de-b697-27a5045a833a.png)
 
 ### Links
 
